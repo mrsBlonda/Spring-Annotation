@@ -7,7 +7,7 @@ import ru.netology.model.Post;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Component
+
 public class PostRepository {
   final ConcurrentHashMap<Long, String> map = new ConcurrentHashMap<>();
   public List<Post> all() {

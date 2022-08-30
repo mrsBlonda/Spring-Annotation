@@ -1,6 +1,8 @@
 package ru.netology.servlet;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import ru.netology.SpringConfig;
 import ru.netology.controller.PostController;
 
 
@@ -10,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class MainServlet extends HttpServlet {
   private PostController controller;
-  ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+  AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+
 
   @Override
   public void init() {

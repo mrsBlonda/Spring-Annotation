@@ -1,3 +1,4 @@
+ru\netology\SpringConfig.class
 ru\netology\controller\PostController.class
 ru\netology\exception\NotFoundException.class
 ru\netology\servlet\MainServlet.class
