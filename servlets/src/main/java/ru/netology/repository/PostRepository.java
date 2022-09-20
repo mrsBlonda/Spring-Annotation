@@ -10,6 +10,8 @@ import java.util.concurrent.ConcurrentHashMap;
 @Component
 public class PostRepository {
   final ConcurrentHashMap<Long, String> map = new ConcurrentHashMap<>();
+  final AtomicLong key = new AtomicLong(1);
+
   public List<Post> all() {
     List<Post> posts = new ArrayList<>();
     Post post;
@@ -30,7 +32,6 @@ public class PostRepository {
   }
 
   public Post save(Post post) {
-    long key = 1;
     if (post.getId() == 0) {
       while (map.containsKey(key)) {
         key++;
